@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Grade Students by their marks</h2>
+    <button onclick="usingif()">Using if</button>
+    <button onclick="usingternary()">Using Ternary</button>
+    
+    <script>
+        function usingif(){
+        let m=prompt("enter your marks");
+        if(m>=90){
+            console.log(`Marks are ${m} and Grade is A`);
+        }
+        else if(m>=40 && m<=75){
+            console.log(`Marks are ${m} and Grade is B`);
+        }
+        else{
+            console.log(`Marks are ${m} and Grade is C`);
+        }
+    }
+        function usingternary(){
+            let marks=prompt("enter your marks");
+            let res=(marks>=90)?`Marks are ${marks} and Grade is A`:
+            (marks>=40 && marks<=75)?`Marks are ${marks} and Grade is B`:`Marks are ${marks} and Grade is C`;
+            console.log(res);
+        }
+</script>
+</body>
+</html>
