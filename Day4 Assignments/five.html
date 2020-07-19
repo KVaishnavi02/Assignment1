@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let c=prompt("enter your sales");
+        switch(true){
+            case (c>0 && c<=5000):
+                s1=+((2/100)*c) + +c;
+                console.log("Total Commision Earned: ",s1);
+                break;
+                case (c>5001 && c<=10000):
+                s2=+((5/100)*c) + +c;
+                console.log("Total Commision Earned: ",s2);
+                break;
+                case (c>10001 && c<=20000):
+                s3=+((7/100)*c) + +c;
+                console.log("Total Commision Earned: ",s3);
+                break;
+                case (c>20000):
+                s4=+((10/100)*c) + +c;
+                console.log("Total Commision Earned: ",s4);
+                break;
+                default:
+                console.log("enter valid sales");
+                break;
+        }
+    </script>
+</body>
+</html>

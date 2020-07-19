@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <button name="b" onclick="add()">+</button>
+    <button name="b" onclick="sub()">-</button>
+    <button name="b" onclick="mul()">*</button>
+    <button name="b" onclick="div()">/</button>
+    <button name="b" onclick="sq()">^</button>
+    <button name="b" onclick="percent()">%</button>
+    <script>
+        function add()
+        {
+            let a=prompt("enter nos to add");
+            r=a.split(" ");
+            sum=+r[0] + +r[1];
+            console.log(sum)
+        }
+        function sub()
+        {
+            let a1=prompt("enter nos to subtract");
+            r1=a1.split(" ");
+            s=+r1[0] - +r1[1];
+            console.log(s);
+        }
+        function mul()
+        {
+            let a2=prompt("enter nos for multiplication");
+            r2=a2.split(" ");
+            s2=+r2[0] * +r2[1];
+            console.log(s2);
+        }
+        function div()
+        {
+            let a3=prompt("enter nos to perform division");
+            r3=a3.split(" ");
+            s3=+r3[0] / +r3[1];
+            console.log(s3);
+        }
+        function sq()
+        {
+            let a4=prompt("enter nos to find sqrt");
+            console.log(Math.sqrt(+a4));
+        
+        }
+        function percent()
+        {
+            let a5=prompt("enter nos to know %");
+            r5=a5.split(" ");
+            s5=+r5[0] % +r5[1];
+            console.log(s5);
+        }
+    </script>
+</body>
+</html>
