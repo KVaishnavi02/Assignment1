@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Assignment</title>
+</head>
+<body>
+    <script>
+            class user1
+            {
+                constructor(name,age,email)
+                {
+                this.age=age;
+                this.name=name;
+                this.email=email;
+                
+                this.luCoins=0;
+                
+                this.courses=[];
+                }
+                login()
+                {
+                    console.log(`${this.name} has logged in`);
+                    return this;
+                }
+                logout()
+                {
+                    console.log(`${this.name} has logged out`);
+                    return this;
+                }
+    
+            }
+
+            let o1=new user1('Raina',32,'raina@gmail.com');
+            let o2=new user1('Virat',30,'virat@gmail.com');
+            o1.login().logout();
+            o2.login().logout();
+            
+            class moderators extends user1
+            {
+                addCoins()
+                {
+                
+                    this.luCoins++;
+                    console.log(`${this.name} has ${this.luCoins} coins`);
+                    return this;
+                }
+                removeCoins()
+                {
+                    this.luCoins--;
+                    console.log(`${this.name} has ${this.luCoins} coins`);
+                    return this;
+                }
+            }
+            let m=new moderators('ben',24,'b@gmail.com');
+
+            m.login().addCoins().addCoins().addCoins().addCoins().addCoins().addCoins().addCoins().removeCoins().removeCoins().removeCoins().logout();
+
+        class Admin extends moderators
+        {
+            addcourse(user1,course)
+                {
+                    user1.courses.push(course);
+                    console.log(user1);
+                    return this;
+                }
+
+            delcourse(user1,course)
+                {
+                    user1.courses.pop(course);
+                    console.log(user1);
+                    return this;
+            }
+        }
+
+        let a=new Admin('Tom',45,'a@gmail.com');
+
+        let arrofu1=[o1,o2,m,a];
+        a.login().addcourse(o1,'JS').addcourse(o1,'HTML').addcourse(o1,"PYTHON").addcourse(o1,"Maths").
+        delcourse(o1,'JS').addCoins()
+        .addCoins().removeCoins().removeCoins().logout();
+
+    </script>
+</body>
+</html>

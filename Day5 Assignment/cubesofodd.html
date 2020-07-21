@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Assignmentt</title>
+</head>
+<body>
+    <script>
+        let n=+prompt("enter a number:")
+        let arr=[];
+        for (let i= 1; i <=n; i++) {
+            arr.push(i);
+        }
+        let r=arr.filter((e=>e%2!=0)).map(e=>e**3);
+        console.log("The Array is: ",arr);
+        console.log("The Cubes are: ",r);
+    </script>
+</body>
+</html>
